@@ -1,0 +1,7 @@
+defaults:
+  - image_encoder: null
+  - action_decoder: null
+
+_target_: geometric_peg_in_hole.bc_model.BCModel
+resize: 224
+fusion_type: concat

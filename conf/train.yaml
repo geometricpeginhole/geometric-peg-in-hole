@@ -1,0 +1,34 @@
+hydra:
+  run:
+    dir: ./train/${hydra.job.name}-${data_dir}-${hydra.runtime.choices.views}-${hydra.runtime.choices.model/image_encoder}_${hydra.runtime.choices.model/action_decoder}-${proprioception}-${rotation_type}-${rotation_loss_type}-${now:%Y.%m.%d-%H.%M.%S}
+
+defaults:
+  - dataloader: base
+  - eval: base
+  - env: base_4mm
+  - model: base
+  - views: top_and_wrist_cams
+  - override model/image_encoder: resnet18
+  - override model/action_decoder: mlp
+  - _self_
+
+wandb:
+  project: geometric-peg-in-hole-train
+
+optim:
+  _target_: torch.optim.Adam
+  lr: 1e-3
+
+train:
+  n_steps: 50000
+  f_log: 500
+  f_eval: 50000
+  f_save: 5000
+
+device: cuda
+proprioception: 'with_prop'
+rotation_type: 6d
+rotation_loss_type: mse
+cache_path: cache0.npy
+data_dir: 'data_new/1000_yp'
+seed: 0

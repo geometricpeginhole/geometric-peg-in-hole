@@ -1,0 +1,7 @@
+hydra:
+  job:
+    chdir: False
+
+defaults:
+  - env: base_4mm
+  - _self_

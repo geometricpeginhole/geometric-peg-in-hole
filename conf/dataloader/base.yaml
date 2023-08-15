@@ -1,0 +1,15 @@
+_target_: torch.utils.data.DataLoader
+batch_size: 16
+num_workers: 1
+shuffle: True
+persistent_workers: True
+pin_memory: False
+dataset:
+  _target_: geometric_peg_in_hole.bc_dataset.BCDataset
+  data_dir: data/100
+  transforms: null
+  views: null
+  delta: False
+  obs_frames: [0]
+  act_frames: [0]
+  in_memory: False

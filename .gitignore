@@ -1,0 +1,11 @@
+/outputs
+/viz
+.vscode
+/data*
+/train
+/train-dev
+__pycache__
+/geometric_peg_in_hole.egg-info
+/cache*
+/multirun
+/test

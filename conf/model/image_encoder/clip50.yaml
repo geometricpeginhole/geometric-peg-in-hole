@@ -1,0 +1,3 @@
+_target_: geometric_peg_in_hole.models.image_encoders.clip50
+frozen: True
+output_dim: 1024

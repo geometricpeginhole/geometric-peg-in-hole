@@ -1,0 +1,2 @@
+_target_: geometric_peg_in_hole.models.lstm_decoder.LstmDecoder
+layers: [1, 1024, 1024, 1]

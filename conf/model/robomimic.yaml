@@ -1,0 +1,8 @@
+model:
+  _target_: lib.bc_model.BCModel
+  image_encoder:
+    _target_: lib.models.visual_encoder.resnet18
+    frozen: False
+  action_decoder:
+    _target_: lib.models.mlp_decoder.MLPDecoder
+    layers: [526, 1024, 1024, 14]

@@ -1,0 +1,11 @@
+defaults:
+  - env: null
+
+_target_: geometric_peg_in_hole.evaluate.evaluate
+n_evaluations: 40
+n_evaluate_steps: 60
+delta: False
+obs_frames: [0]
+act_frames: [0]
+views: [top]
+seed_start: 0

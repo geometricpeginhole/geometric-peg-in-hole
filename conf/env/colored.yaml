@@ -1,0 +1,8 @@
+defaults:
+  - base_4mm
+  - _self_
+
+_target_: geometric_peg_in_hole.bc_environment.BCEnvironment
+args:
+  obj_color: null
+  model_dir: "objects_4mm copy"

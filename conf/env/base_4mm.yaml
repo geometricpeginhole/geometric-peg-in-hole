@@ -1,0 +1,23 @@
+defaults:
+  - variant: base
+  - object_set: base
+  - _self_
+
+_target_: geometric_peg_in_hole.bc_environment.BCEnvironment
+args:
+  headless: False
+  camera_distance: 0.01
+  camera_pitch: -90
+  camera_yaw: 30
+  camera_target_position: [0, 0, 0]
+  model_dir: objects_4mm
+  obj_color: white
+  x_pos: -0.04
+  x_align: 0.15
+  x_align_step: 0.02
+  x_close: 0.04
+  y_pos: 0.2
+  z_pos: -0.75
+  n_wait_threshold: 24
+  max_velocity: 10
+  randomized: False

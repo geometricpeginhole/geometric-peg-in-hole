@@ -1,0 +1,11 @@
+hydra:
+  run:
+    dir: data_x/${n_total}_${hydra.runtime.choices.env/variant}
+
+defaults:
+  - env: base_4mm
+  - _self_
+
+n_total: 1000
+n_samples: 10
+start_idx: 1000

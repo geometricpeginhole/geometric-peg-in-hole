@@ -1,0 +1,17 @@
+hydra:
+  run:
+    dir: ./train-dev/${hydra.job.name}-${dataloader.dataset.data_dir}-${hydra.runtime.choices.views}-${hydra.runtime.choices.model/image_encoder}_${hydra.runtime.choices.model/action_decoder}-${proprioception}-${rotation_type}-${rotation_loss_type}-${now:%Y.%m.%d-%H.%M.%S}
+
+defaults:
+  - train
+  - override eval: dev
+  - _self_
+
+wandb:
+  project: geometric-peg-in-hole-train-dev
+
+train:
+  n_steps: 51
+  f_log: 5
+  f_eval: 50
+  f_save: 50

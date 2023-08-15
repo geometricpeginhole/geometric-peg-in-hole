@@ -1,0 +1,28 @@
+hydra:
+  run:
+    dir: visualize/100_fast
+
+defaults:
+  - ../env/base@_global_
+  - _self_
+
+generate:
+  n_samples: 100
+  
+data_dir: data3/100
+n_evaluations: 10
+n_evaluate_steps: 30
+device: cuda:0
+delta: False
+obs_frames: [0]
+act_frames: [0]
+views: [top]
+
+dataset:
+  _target_: lib.bc_dataset.BCDataset
+  data_dir: data3/100
+  delta: False
+  obs_frames: [0]
+  act_frames: [0]
+  views: [top]
+  transforms: None
