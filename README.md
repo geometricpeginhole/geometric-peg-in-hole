@@ -6,6 +6,7 @@ This is the official PyTorch/PyBullet implementation of Imitation Learning for S
 mamba env create --file environment.yml
 mamba activate cap
 pip install --no-deps -e .
+pip install pybullet_planning
 ```
 
 ## Generate Data
