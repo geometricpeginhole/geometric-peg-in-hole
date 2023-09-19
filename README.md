@@ -3,8 +3,8 @@ This is the official PyTorch/PyBullet implementation of Imitation Learning for S
 
 ## Environment Setup
 ```
-conda env create --file environment.yml
-conda activate cap
+mamba env create --file environment.yml
+mamba activate cap
 pip install --no-deps -e .
 ```
 
