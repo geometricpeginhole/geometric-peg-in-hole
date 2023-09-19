@@ -1,12 +1,15 @@
 name: cap
 channels:
   - conda-forge
+  - pytorch
+  - nvidia
+  - pytorch3d
 dependencies:
   - python=3.8
   - pytorch==1.13.1
   - torchvision==0.14.1
   - torchaudio==0.13.1
-  - cudatoolkit=11.3
+  - pytorch-cuda=11.7
   - ca-certificates
   - openssl
   - numba
@@ -28,10 +31,8 @@ dependencies:
   - regex
   - gdown
   - timm
-  - nvidiacub
   - pytorch3d
   - qt
-  - pytorch-cuda=11.7
   - pyvips
   - seaborn
   - graphicsmagick
